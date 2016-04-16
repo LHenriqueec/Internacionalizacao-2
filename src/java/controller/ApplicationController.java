@@ -2,7 +2,6 @@ package controller;
 
 import java.text.NumberFormat;
 import java.util.Locale;
-import java.util.ResourceBundle;
 
 import application.Languages;
 import javafx.collections.FXCollections;
@@ -25,7 +24,7 @@ public class ApplicationController {
 		ObservableList<Languages> list = FXCollections.observableArrayList();
 		list.addAll(Languages.values());
 		cmbLanguage.setItems(list);
-		cmbLanguage.setValue(Languages.pt_BR);
+		cmbLanguage.setValue(Languages.PORTUGUES);
 		
 		txtValor.setText("0");
 		

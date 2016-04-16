@@ -2,16 +2,28 @@ package application;
 import java.util.Locale;
 
 public enum Languages {
-	pt_BR {
+	PORTUGUES {
 		@Override
 		public Locale getLocale() {
 			return new Locale("pt", "BR");	
 		}
 	},
-	en_US {
+	INGLES {
 		@Override
 		public Locale getLocale() {
 			return Locale.US;
+		}
+	},
+	JAPONES {
+		@Override
+		public Locale getLocale() {
+			return Locale.JAPAN;
+		}
+	},
+	ITALIANO {
+		@Override
+		public Locale getLocale() {
+			return Locale.ITALY;
 		}
 	};
 	

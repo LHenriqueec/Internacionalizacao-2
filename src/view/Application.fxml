@@ -20,7 +20,7 @@
 		GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
 	<Label text="Locale:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-	<ComboBox fx:id="cmbLanguage" onAction="#handleLanguage" promptText="Idioma" prefWidth="80"
+	<ComboBox fx:id="cmbLanguage" onAction="#handleLanguage" promptText="Idioma" prefWidth="110"
 		GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
 	<Label text="Resultado:" GridPane.columnIndex="0"

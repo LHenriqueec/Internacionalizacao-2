@@ -14,16 +14,10 @@ public enum Languages {
 			return Locale.US;
 		}
 	},
-	JAPONES {
+	FRANCES {
 		@Override
 		public Locale getLocale() {
-			return Locale.JAPAN;
-		}
-	},
-	ITALIANO {
-		@Override
-		public Locale getLocale() {
-			return Locale.ITALY;
+			return Locale.CANADA_FRENCH;
 		}
 	};
 	

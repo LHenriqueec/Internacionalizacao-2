@@ -2,6 +2,7 @@ package controller;
 
 import java.text.NumberFormat;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 import application.Languages;
 import javafx.collections.FXCollections;
@@ -17,7 +18,13 @@ public class ApplicationController {
 	@FXML
 	private TextField txtValor;
 	@FXML
+	private Label lblResult;
+	@FXML
 	private Label lblValue;
+	@FXML
+	private Label lblLocale;
+	@FXML
+	private Label lblAmount;
 	
 	@FXML
 	private void initialize() {
@@ -27,19 +34,18 @@ public class ApplicationController {
 		cmbLanguage.setValue(Languages.PORTUGUES);
 		
 		txtValor.setText("0");
-		
-		conversao(cmbLanguage.getValue());
 	}
 	
 	@FXML
 	private void handleLanguage() {
-		conversao(cmbLanguage.getValue());
-	}
-	
-	private void conversao(Languages language) {
-		Locale locale = language.getLocale();
-		NumberFormat format = NumberFormat.getCurrencyInstance(locale);
+		Locale locale = cmbLanguage.getValue().getLocale();
+		ResourceBundle bundle = ResourceBundle.getBundle("language", locale);
 		
-		lblValue.setText(format.format(Double.parseDouble(txtValor.getText())));
+		NumberFormat format = NumberFormat.getCurrencyInstance(locale);
+		lblAmount.setText(format.format(Double.parseDouble(txtValor.getText())));
+		
+		lblValue.setText(bundle.getString("value"));
+		lblLocale.setText(bundle.getString("locale"));
+		lblResult.setText(bundle.getString("result"));
 	}
 }

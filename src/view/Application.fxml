@@ -15,17 +15,17 @@
 		<Insets top="7" right="7" bottom="7" left="7" />
 	</padding>
 
-	<Label text="Valor:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+	<Label fx:id="lblValue" text="Valor:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 	<TextField fx:id="txtValor" GridPane.hgrow="ALWAYS"
 		GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-	<Label text="Locale:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+	<Label fx:id="lblLocale" text="Locale:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 	<ComboBox fx:id="cmbLanguage" onAction="#handleLanguage" promptText="Idioma" prefWidth="110"
 		GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-	<Label text="Resultado:" GridPane.columnIndex="0"
+	<Label fx:id="lblResult" text="Resultado:" GridPane.columnIndex="0"
 		GridPane.rowIndex="2" />
-	<Label fx:id="lblValue" text="R$" GridPane.columnIndex="1"
+	<Label fx:id="lblAmount" text="R$" GridPane.columnIndex="1"
 		GridPane.rowIndex="2" />
 </GridPane>
 
